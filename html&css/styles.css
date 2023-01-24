@@ -131,6 +131,8 @@ ul li a:hover{
     background-color: var(--color-skyblue) ;
     color: var(--bg-menu);
 }
+
+
 .main_hero .intro{
     font-size: var(--fz-normal);
     /* color: var(--color-transparent); */

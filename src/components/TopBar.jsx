@@ -7,28 +7,20 @@ import Tw from '../medias/icons/typcn_social-twitter-circular.svg'
 const TopBar = () => {
     return (
         <>
-            <div className='vw-100'>
-                <div>
-                    <img src={Z} alt="logo" />
+            <div class="top_bar dflex justify-between">
+                <div class="logo">
+                    <img src={Z} srcset="" alt='Logo' />
                 </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src={In} alt="Linkedin" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src={Git} alt="Github" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src={Tw} alt="Twitter" />
-                            </a>
-                        </li>
-                    </ul>
+                <div class="social">
+                    <a class="social_icon" href="http://">
+                        <img src={In} srcset="" alt='Linkedin' />
+                    </a>
+                    <a class="social_icon" href="http://">
+                        <img src={Git} srcset="" alt='Github' />
+                    </a>
+                    <a class="social_icon" href="http://">
+                        <img src={Tw} srcset="" alt='Twitter' />
+                    </a>
                 </div>
             </div>
         </>
