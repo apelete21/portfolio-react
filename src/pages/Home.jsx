@@ -1,6 +1,7 @@
 import React from 'react'
 import Me from '../medias/pictures/me-round.png';
 import ArrowDown from '../medias/icons/arr-down.svg';
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -18,9 +19,9 @@ const Home = () => {
           <span class="name">ADZOHONOU K. Apelete</span>
         </div>
         <div class="skillSpecialisation">React&Next Developer</div>
-        <a class="skipIcone" href='#'>
+        <Link class="skipIcone" to='/portfolio'>
           <img src={ArrowDown} alt="arrow"/>
-        </a>
+        </Link>
       </div>
       </>
   )
