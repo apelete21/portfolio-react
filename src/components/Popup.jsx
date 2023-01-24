@@ -9,15 +9,16 @@ const Popup = () => {
                 <div className="closeBtn dflex">
                     <img src={Close} alt="btn close" className='h-100' />
                 </div>
-                <div className="project-details dgrid">
+                <div className="project-details justify-between dgrid">
                     <div className="project-img">
                         <img src={ProjectImg} alt="project img" className='h-100 w-100' />
                     </div>
                     <div className="project-info dgrid">
 
-                        <h3 className="project-name">
-                            Spotify clone web app
-                        </h3>
+                        <h2 className="project-name">
+                            Spotify     <br />
+                            clone web app
+                        </h2>
                         <div className="project-description">
                             <h4>Description:</h4>
                             <p>A simple spotify clone version that have best features of the original and others. It is built essentially with NextJs framework with Google Login integration.</p>
