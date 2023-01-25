@@ -255,22 +255,22 @@ textarea {
 }
 
 
-/* CSS DE LA PAGE SKILLS  */
+/* CSS DE LA PAGE abouts  */
 
-.skill_section{
+.about_section{
   display: flex;
   margin-top: 10%;
   margin-bottom: 10%;
 }
-.txt_skill{
+.txt_about{
   padding: 0% 10% 0% 0%;
   width: 60%;
 }
-.img_skill{
+.img_about{
   text-align: center;
   padding: 0% 10% 0% 10%;
 }
-.p1_skill, .btn_skill{
+.p1_about, .btn_about{
   color: var(--color-white);
   background-color: var(--level-box-bg);
   border-radius: 1rem;
