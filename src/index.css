@@ -34,7 +34,8 @@
   ;
   --contact-content-bg: linear-gradient(89.74deg, #3B4348 -9.7%, #2D2F36 78.11%);
   --popup-bg: linear-gradient(104.41deg, #52D7FF -13.33%, #39869E 19.16%, #20363E 89.97%, #17181A 118.84%);
-  --popup-text-bg: rgba(12, 13, 14, 0.2);;
+  --popup-text-bg: rgba(12, 13, 14, 0.2);
+  ;
 }
 
 .popup-bg {
@@ -374,4 +375,143 @@ ul li a:hover {
 
 /* ******************* */
 /* Popup View */
+/* ******************* */
+
+
+/* ******************* */
+/* About section */
+/* ******************* */
+
+.about_section {
+  margin: 6vh auto 0;
+  display: flex;
+  height: 60vh;
+  width: 80vw;
+}
+
+.txt_about {
+  width: 60%;
+}
+
+.img_about {
+  width: auto;
+}
+
+.img_about img {
+  border-radius: 1rem;
+}
+
+.p1_about,
+.btn_about {
+  color: var(--color-white);
+  background-color: var(--tbox-bg);
+  border-radius: 1rem;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+/* ******************* */
+/* About section */
+/* ******************* */
+
+
+/* ******************* */
+/* Contact page */
+/* ******************* */
+
+#contact {
+  color: #fff;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  border: solid var(--color-skyblue);
+  padding: 0 20px;
+  border-radius: 10px;
+  flex-basis: 40%;
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.contactForm form .btn {
+  padding: 15px;
+  width: 30%;
+  border-radius: 8px;
+  background-color: var(--color-skyblue);
+  margin-bottom: 20px;
+}
+
+.contactForm input,
+textarea {
+  background-color: var(--form-input-bg);
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 90%;
+}
+
+textarea {
+  height: 50%;
+}
+
+.contactForm .title {
+  color: #fff;
+}
+
+#contact .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 60%;
+
+}
+
+#contact .address .addressIcon {
+  width: 100%;
+  height: 80%;
+  background-color: var(--form-input-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.addressIcon .test {
+  display: flex;
+  flex-direction: column;
+  /* border: solid green; */
+  justify-content: space-between;
+  height: 60%;
+}
+
+#contact .address .addressIcon .icon {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#contact .address .addressIcon .icon img {
+  margin-right: 20px;
+}
+
+.address .addressIcon .text {
+  font-size: var(--fz-normal);
+  font-weight: var(--fw-light);
+}
+
+/* ******************* */
+/* Contact page */
 /* ******************* */
