@@ -201,7 +201,7 @@ body {
 /* ***************** */
 
 .main_nav {
-  position: absolute;
+  position: fixed;
   left: 50%;
   transform: translatex(-50%);
   bottom: 1vh;
@@ -524,7 +524,152 @@ ul li a:hover {
   height: 47%;
 }
 
-
 /* ******************* */
 /* Contact page */
+/* ******************* */
+
+
+/* ******************* */
+/* Skills page */
+/* ******************* */
+
+ 
+.skills-bar {
+    background-color: #2D2F36;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.skills-bar .bar {
+    width: 50%;
+    padding: 20px 20px;
+
+}
+.skills-bar .bar .info{
+     margin: 10px 0px;
+}
+.skills-bar .bar .info img {
+     height: 60px;
+     width: 60px;
+}
+
+.skills-bar .bar .progress-line.jsx span {
+    width: 80%;
+}
+
+.skills-bar .bar .progress-line.redux span {
+    width: 20%;
+
+}
+
+.skills-bar .bar .progress-line.git span {
+    width: 80%;
+
+
+}
+
+.skills-bar .bar .progress-line.figma span {
+    width: 40%;
+
+}
+
+.skills-bar .bar .progress-line.es6 span {
+    width: 80%;
+
+}
+
+.skills-bar .bar .progress-line.node span {
+    width: 80%;
+
+}
+
+.skills-bar .bar .progress-line.htmlCss span {
+    width: 80%;
+
+}
+
+.skills-bar .bar .progress-line.php span {
+    width: 60%;
+
+}
+
+.skills-bar .bar .progress-line.bootstrap span {
+    width: 60%;
+
+}
+
+.skills-bar .progress-line {
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background-color: #262A34;
+    border-radius: 5px;
+}
+
+.skills-bar .bar .progress-line span {
+    position: absolute;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #52D7FF;
+}
+
+.skills-bar .bar .progress-line::after {
+    position: absolute;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    right: 0px;
+    top: -50px;
+
+}
+
+.skills-bar .bar .progress-line.jsx::after {
+    content: 'JSX';
+
+}
+
+.skills-bar .bar .progress-line.redux::after {
+    content: 'REDUX';
+
+}
+
+.skills-bar .bar .progress-line.git::after {
+    content: 'Git';
+
+
+}
+
+.skills-bar .bar .progress-line.figma::after {
+    content: 'Figma';
+
+}
+
+.skills-bar .bar .progress-line.es6::after {
+    content: 'Javascript fundamentals + ES6';
+
+}
+
+.skills-bar .bar .progress-line.node::after {
+    content: 'NODE + NPM';
+
+}
+
+.skills-bar .bar .progress-line.htmlCss::after {
+    content: 'HTML + CSS';
+
+}
+
+.skills-bar .bar .progress-line.php::after {
+    content: 'PHP';
+
+}
+
+.skills-bar .bar .progress-line.bootstrap::after {
+    content: 'Bootstrap';
+
+}
+
+/* ******************* */
+/* Skills page */
 /* ******************* */
