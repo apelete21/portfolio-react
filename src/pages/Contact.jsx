@@ -8,8 +8,8 @@ const Contact = () => {
     <div className="contact w-100 h-100 dflex justify-between">
       <div className="address">
         <div className="addressIcon">
-          <div className="test">
-            <div className="text">You have a project ? let's <br /> discuss on it</div>
+          <div className="text-box">
+            <em className="text">You have a project ? let's <br /> discuss on it</em>
             <div>
               <div className="icon">
                 <img src={Tel} alt="" />
@@ -35,9 +35,7 @@ const Contact = () => {
         <form action="">
           <input type="text" placeholder="Name" />
           <input type="mail" placeholder="Email" />
-          <textarea name="" id="" placeholder="Message here...">
-
-          </textarea>
+          <textarea id="" placeholder="Message here..."></textarea>
           <button className="btn">Send</button>
         </form>
       </div>
