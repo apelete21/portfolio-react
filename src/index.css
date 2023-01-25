@@ -395,6 +395,7 @@ ul li a:hover {
 
 .txt_about {
   width: 60%;
+  max-width: 800px;
 }
 
 .img_about {
