@@ -254,6 +254,27 @@ textarea {
   font-weight: var(--fw-light);
 }
 
-* {
-  /* border: solid; */
+
+/* CSS DE LA PAGE SKILLS  */
+
+.skill_section{
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.txt_skill{
+  padding: 0% 10% 0% 0%;
+  width: 60%;
+}
+.img_skill{
+  text-align: center;
+  padding: 0% 10% 0% 10%;
+}
+.p1_skill, .btn_skill{
+  color: var(--color-white);
+  background-color: var(--level-box-bg);
+  border-radius: 1rem;
+  padding: 10px 10px 10px 10px;
+  width: 70%;
+  text-decoration: none;
 }
