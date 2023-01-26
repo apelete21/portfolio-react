@@ -1,35 +1,35 @@
 import React from 'react'
 import Close from '../medias/icons/close.svg'
-import ProjectImg from '../medias/pictures/work2.png'
 
-const Popup = () => {
+const Popup = ({data, hideFunc}) => {
     return (
-        <div className='project-view-bg vh-100 vw-100 popup-bg'>
+        <div className='project-view-bg vh-100 vw-100 popup-bg'
+            onClick={() => hideFunc()}
+        >
             <div className='project-view dflex align-center'>
-                <div className="closeBtn dflex">
+                <div className="closeBtn dflex" onClick={() => hideFunc()}>
                     <img src={Close} alt="btn close" className='h-100' />
                 </div>
                 <div className="project-details justify-between dgrid">
                     <div className="project-img">
-                        <img src={ProjectImg} alt="project img" className='h-100 w-100' />
+                        <img src={data.projectImage} alt="project img" className='h-100 w-100' />
                     </div>
                     <div className="project-info dgrid">
 
-                        <h2 className="project-name">
-                            Spotify     <br />
-                            clone web app
-                        </h2>
+                        <h3 className="project-name">
+                            {data.projectName}
+                        </h3>
                         <div className="project-description">
-                            <h4>Description:</h4>
-                            <p>A simple spotify clone version that have best features of the original and others. It is built essentially with NextJs framework with Google Login integration.</p>
+                            <h5>Description:</h5>
+                            <h6>{data.description}</h6>
                         </div>
                         <div className="project-tools">
-                            <h4>Tools:</h4>
-                            <p>Figma, ReactJs, NextJS, MongoDB, Styled Components, </p>
+                            <h5>Tools:</h5>
+                            <h6> {data.tools} </h6>
                         </div>
 
 
-                        <a href="#blocked" target="_blank" className='visitLink' rel="noopener noreferrer">
+                        <a href={data.link} target="_blank" className='visitLink' rel="noopener noreferrer">
                             <button className='visitBtn'>
                                 Visit
                             </button>
