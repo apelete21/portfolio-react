@@ -278,3 +278,40 @@ textarea {
   width: 70%;
   text-decoration: none;
 }
+.main_contan{
+  padding: 2rem 3rem;
+}
+
+.portfolio_block{
+  display: flex;
+  flex-direction: row; 
+}
+
+.portfolio_block .img_box{
+  flex: 0 1 45%; 
+  margin-right: 3rem;
+  position: relative;
+}
+
+.portfolio_block .img_box img{
+  width: 100%;
+  aspect-ratio: 1;
+  display: inline-block;
+}
+
+.portfolio_block .primary_btn{
+color: #262A34;
+text-decoration: none;
+height: 3rem;
+background-color: #52D8FF;
+padding: 5rem auto;
+border-radius: 13px;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
