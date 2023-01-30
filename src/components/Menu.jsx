@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import Animation from './Animation'
 
 const Menu = () => {
 
   const location = useLocation()
 
+  const [animate, setAnimate] = useState(false)
+
+  function Change() {
+    setAnimate(true)
+    setTimeout(() => {
+      setAnimate(false)
+    }, 2000);
+  }
+
   return (
     <>
-      <div class="main_nav">
-        <ul className='justify-between w-100 dflex'>
+      {animate && <Animation />}
+      <div class="main_nav menu-closed">
+        <ul className='w-100 dflex' onClick={() => Change()}>
           <li><Link to={'/'} className={location.pathname === '/' ? 'm_active' : ''}>Home</Link></li>
           <li><Link to={'/skills'} className={location.pathname === '/skills' ? 'm_active' : ''}>Skills</Link></li>
           <li><Link to={'/portfolio'} className={location.pathname === '/portfolio' ? 'm_active' : ''}>Portfolio</Link></li>

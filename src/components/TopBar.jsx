@@ -3,6 +3,7 @@ import Z from '../medias/icons/z.svg'
 import In from '../medias/icons/jam_linkedin-circle.svg'
 import Git from '../medias/icons/jam_github-circle.svg'
 import Tw from '../medias/icons/typcn_social-twitter-circular.svg'
+import Menu from '../medias/icons/open-menu.svg'
 import { Link } from 'react-router-dom'
 
 const TopBar = () => {
@@ -22,6 +23,9 @@ const TopBar = () => {
                     <Link className="social_icon" target={'_blank'} to="http://">
                         <img src={Tw} srcset="" alt='Twitter' />
                     </Link>
+                </div>
+                <div className="logo menu-openner">
+                    <img src={Menu} srcset="" alt='Menu openner' />
                 </div>
             </div>
         </>
