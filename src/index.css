@@ -1045,6 +1045,7 @@ ul li a:hover,
   align-items: center;
   margin-bottom: 15%;
   height: calc(90vh - 80px);
+  overflow-x: scroll;
 }
 
 .main_contan {
@@ -1053,10 +1054,9 @@ ul li a:hover,
 
 .portfolio_block {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  overflow-x: scroll;
   margin: 0 auto;
   gap: 2rem;
   height: 100%;
