@@ -1034,6 +1034,11 @@ ul li a:hover,
 /* Portfolio page */
 /* ******************* */
 
+.portfolio_container {
+  display: grid;
+  height: calc(90vh - 80px);
+}
+
 .main_contan {
   padding: 2rem 3rem;
 }
@@ -1044,11 +1049,12 @@ ul li a:hover,
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  gap: 2rem;
+  height: 100%;
 }
 
 .portfolio_block .img_box {
-  row-gap: 3rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   position: relative;
   min-width: 200px;
   width: 100%;
