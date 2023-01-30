@@ -129,8 +129,6 @@ h6 {
   width: 30px;
 }
 
-/* .social {} */
-
 .social .social_icon {
   margin: 0 10px;
 }
@@ -257,7 +255,8 @@ ul li a:hover,
 
 
 .menu-openner,
-.menu-closer {
+.menu-closer,
+.social-menu {
   display: none;
 }
 
@@ -273,6 +272,30 @@ ul li a:hover,
     top: 1rem;
     right: 1rem;
   }
+
+  .social-menu {
+    gap: 1.5rem;
+    display: flex;
+    max-width: 50px;
+    margin: 2rem auto 0;
+    padding-inline: 5rem;
+  }
+
+  .social-menu * {
+    margin: 0 auto;
+  }
+
+  .social-menu a {
+    width: 40px;
+    min-width: unset !important;
+    display: block;
+  }
+
+  .social-menu a img {
+    width: 40px;
+  }
+
+
 
   .logo.menu-openner,
   .menu-closer {
