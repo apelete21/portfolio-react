@@ -9,20 +9,23 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Menu from './components/Menu';
 import TopBar from './components/TopBar';
+import { AppContextProvider } from './contexts/Context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <React.StrictMode>
-      <TopBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/skills' element={<Skills />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/about' element={<About  />} />
-        <Route path='/contact' element={<Contact />} />
-      </Routes>
-      <Menu />
-    </React.StrictMode>
-  </BrowserRouter>
+  <AppContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <TopBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+        <Menu />
+      </React.StrictMode>
+    </BrowserRouter>
+  </AppContextProvider>
 );
