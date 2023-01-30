@@ -282,6 +282,13 @@ textarea {
   padding: 2rem 3rem;
 }
 
+.portfolio_container{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
 .portfolio_block{
   display: flex;
   flex-direction: row; 
@@ -313,5 +320,24 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+
+}
+
+/*********  Responsivity portfolio ****/
+
+@media only screen and (max-width: 600px) {
+  .portfolio_block {
+    flex-direction: column;
+  }
+
+  .main_contain {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio_block .img_box {
+  margin-bottom: 2rem;
+  margin-right: auto;
+}
 
 }
