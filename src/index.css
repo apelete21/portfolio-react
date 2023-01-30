@@ -117,7 +117,7 @@ h6 {
 .top_bar {
   padding: 1rem;
   position: sticky;
-  top: 0px;
+  top: -1px;
   z-index: 600;
 }
 
@@ -690,7 +690,7 @@ ul li a:hover,
 }
 
 .address .addressIcon .text {
-  font-size: var(--fz-normal);
+  font-size: var(--fz-big);
   font-weight: var(--fw-light);
   margin-bottom: 20px;
 }
@@ -787,7 +787,7 @@ ul li a:hover,
   }
 
   .address .addressIcon .text {
-    font-size: var(--fz-normal);
+    font-size: var(--fz-big);
     font-weight: var(--fw-light);
   }
 
