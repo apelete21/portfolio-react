@@ -386,7 +386,7 @@ ul li a:hover,
   overflow-y: scroll;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 700;
 }
 
 .project-view {
@@ -673,6 +673,7 @@ ul li a:hover,
 .address .addressIcon .text {
   font-size: var(--fz-normal);
   font-weight: var(--fw-light);
+  margin-bottom: 20pc;
 }
 
 .contactForm {
