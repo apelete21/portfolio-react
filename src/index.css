@@ -137,6 +137,12 @@ h6 {
   width: 30px;
 }
 
+@media (max-width: 255px) {
+  .social {
+    display: none;
+  }
+}
+
 /* **************** */
 /* Top bar */
 /* **************** */
@@ -1036,6 +1042,8 @@ ul li a:hover,
 
 .portfolio_container {
   display: grid;
+  align-items: center;
+  margin-bottom: 15%;
   height: calc(90vh - 80px);
 }
 
@@ -1045,16 +1053,16 @@ ul li a:hover,
 
 .portfolio_block {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  overflow-x: scroll;
   margin: 0 auto;
   gap: 2rem;
   height: 100%;
 }
 
 .portfolio_block .img_box {
-  /* margin-bottom: 3rem; */
   position: relative;
   min-width: 200px;
   width: 100%;
