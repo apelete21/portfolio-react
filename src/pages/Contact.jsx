@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Tel from '../medias/icons/tel.svg'
 import Map from '../medias/icons/map.svg'
 import Mail from '../medias/icons/mail.svg'
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    
+    e.preventDefault();
+
+    emailjs.sendForm('service_coderz', 'template_coderz', form.current, 'ZklspaSJjOqV4Lc2O')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div className="contact w-100 h-100 dflex justify-between">
       <div className="address">
@@ -32,11 +48,11 @@ const Contact = () => {
       </div>
       <div className="contactForm">
         <h2 className="title">Contact Me</h2>
-        <form action="">
-          <input type="text" placeholder="Name" />
-          <input type="mail" placeholder="Email" />
-          <textarea id="" placeholder="Message here..."></textarea>
-          <button className="btn">Send</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="from_name" placeholder="Name" />
+          <input type="email" name="from_email" placeholder="Email" />
+          <textarea name="message" placeholder="Message here..."></textarea>
+          <button type='submit' className="btn">Send</button>
         </form>
       </div>
     </div>
