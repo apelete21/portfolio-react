@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Tel from '../medias/icons/tel.svg'
 import Map from '../medias/icons/map.svg'
@@ -8,15 +8,27 @@ const Contact = () => {
 
   const form = useRef();
 
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [message, setMessage] = useState()
+  const [confirm, setConfirm] = useState()
+
   const sendEmail = (e) => {
-    
+
     e.preventDefault();
 
     emailjs.sendForm('service_coderz', 'template_coderz', form.current, 'ZklspaSJjOqV4Lc2O')
       .then((result) => {
-          console.log(result.text);
+
+        if (result.text === 'OK') {
+          setConfirm('Sent successfully! Thanks.')
+        }
+
+        setName('')
+        setEmail('')
+        setMessage('')
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
   };
 
@@ -49,10 +61,42 @@ const Contact = () => {
       <div className="contactForm">
         <h2 className="title">Contact Me</h2>
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="from_name" placeholder="Name" />
-          <input type="email" name="from_email" placeholder="Email" />
-          <textarea name="message" placeholder="Message here..."></textarea>
-          <input type='submit' className="btn" value={'Send'} />
+          <input
+          required
+            type="text"
+            name="from_name"
+            placeholder="Name"
+            value={name}
+            onChange={e => {
+              setName(e.target.value)
+              setConfirm('')
+            }}
+          />
+          <input
+          required
+            type="email"
+            name="from_email"
+            placeholder="Email"
+            value={email}
+            onChange={e => {
+              setEmail(e.target.value)
+              setConfirm('')
+            }}
+          />
+          <textarea
+            name="message"
+            placeholder="Message here..."
+            value={message}
+            onChange={(e) => {
+              setMessage(e.target.value)
+              setConfirm('')
+            }}
+          >
+
+          </textarea>
+          <input
+          required type='submit' className="btn" value={'Send'} />
+          <p> {confirm} </p>
         </form>
       </div>
     </div>
