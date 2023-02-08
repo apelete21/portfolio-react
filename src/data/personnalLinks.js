@@ -8,7 +8,7 @@ export const socials = {
     twitter: {
         id: '',
         name: '',
-        link: 'http://www.twitter.com/'
+        link: 'http://www.twitter.com/_CoderZ'
     },
 
     github: {
