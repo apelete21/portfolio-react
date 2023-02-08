@@ -713,7 +713,7 @@ ul li a:hover,
   .img_about {
     width: auto;
     max-width: 300px;
-    margin: 0 auto 20px;
+    margin: 0 auto 4vh;
     width: auto;
     max-height: 60vh;
   }
@@ -721,7 +721,6 @@ ul li a:hover,
   .img_about img {
     border-radius: 1rem;
     height: auto;
-    border-radius: 1rem;
   }
 
   .p1_about,
