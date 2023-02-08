@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Me from '../medias/pictures/me-round.png';
 import ArrowDown from '../medias/icons/arr-down.svg';
 import { Link } from 'react-router-dom'
+import { AppContext } from '../contexts/Context';
 
 const Home = () => {
+
+  const { Change } = useContext(AppContext)
+
   return (
       <>
       <div className='homebg vw-100 vh-100'>
@@ -19,7 +23,7 @@ const Home = () => {
           <span class="name">ADZOHONOU K. Apelete</span>
         </div>
         <div class="skillSpecialisation">React&Next Developer</div>
-        <Link class="skipIcone" to='/portfolio'>
+        <Link class="skipIcone" to='/portfolio' onClick={() => Change()}>
           <img src={ArrowDown} alt="arrow"/>
         </Link>
       </div>

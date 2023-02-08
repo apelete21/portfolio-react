@@ -1,18 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Popup from '../components/Popup'
+import { AppContext } from '../contexts/Context'
 import projectsData from '../data/data'
 
 const Portfolio = () => {
 
-  const [popup, setView] = useState(false)
-
-  function viewPopup() {
-    if (popup === true) {
-      setView(false)
-    } else {
-      setView(true)
-    }
-  }
+  const {
+    popup,
+    togglePopupView,
+    itemView,
+    setItemView
+  } = useContext(AppContext)
 
   return (
     <>
@@ -25,16 +23,13 @@ const Portfolio = () => {
             {projectsData.map((element, item) => {
               return (
                 <>
-                  <div class="img_box" key={item}>
+                  <div class="img_box" key={item} onClick={() => togglePopupView(item)}>
                     <img src={element.projectImage} alt="" srcset="" className='w-100' />
-                    <button class="primary_btn"
-                      onClick={() => viewPopup()}
-                    >
+                    <button class="primary_btn">
                       {element.projectName}
                       <br />
                       <h6>Click to view it</h6>
                     </button>
-                    {popup === true && <Popup data={element} hideFunc={viewPopup} />}
                   </div>
                 </>
               )
@@ -43,6 +38,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      {popup && <Popup data={projectsData[itemView]} hidePopup={togglePopupView} />}
     </>
   )
 }

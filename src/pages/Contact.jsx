@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import Tel from '../medias/icons/tel.svg'
 import Map from '../medias/icons/map.svg'
 import Mail from '../medias/icons/mail.svg'
+import { socials } from '../data/personnalLinks';
 
 const Contact = () => {
 
@@ -29,6 +30,7 @@ const Contact = () => {
         setMessage('')
       }, (error) => {
         console.log(error.text);
+        setConfirm('Not sent ! Please verify your network and retry !' )
       });
   };
 
@@ -41,18 +43,26 @@ const Contact = () => {
             <div>
               <div className="icon">
                 <img src={Tel} alt="" />
-                <span>(00228) 93 91 75 91 / 98 05 17 45</span>
+                <span>(00228)
+                  <a href={'tel:' + socials.number.profesional}>
+                    93 91 75 91
+                  </a>
+                  /
+                  <a href={'tel:' + socials.number.mobile}>
+                    98 05 17 45
+                  </a>
+                </span>
               </div>
               <div className="icon">
                 <img src={Map} alt="" /><span> Domicile Adzohonou Kodjo
                   Semanou,
                   Golfe <br /> Lomé-TOGO</span>
               </div>
-              <div className="icon">
+              <a className="icon" href={'mailto:'+socials.mail.email}>
                 <img src={Mail}
                   alt="" />
-                <span>adzohonouapelete@gmail.com</span>
-              </div>
+                <span>{socials.mail.email}</span>
+              </a>
             </div>
           </div>
 
@@ -62,7 +72,7 @@ const Contact = () => {
         <h2 className="title">Contact Me</h2>
         <form ref={form} onSubmit={sendEmail}>
           <input
-          required
+            required
             type="text"
             name="from_name"
             placeholder="Name"
@@ -73,7 +83,7 @@ const Contact = () => {
             }}
           />
           <input
-          required
+            required
             type="email"
             name="from_email"
             placeholder="Email"
@@ -95,8 +105,11 @@ const Contact = () => {
 
           </textarea>
           <input
-          required type='submit' className="btn" value={'Send'} />
-          <p> {confirm} </p>
+            required type='submit' className="btn" value={'Send'} />
+          
+          
+          {confirm !== '' && <p> {confirm} </p>}
+          
         </form>
       </div>
     </div>

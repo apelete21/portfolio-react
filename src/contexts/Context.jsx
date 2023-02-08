@@ -1,5 +1,4 @@
-import { createContext, useEffect, useState } from "react";
-import { isDOMComponent } from "react-dom/test-utils";
+import { createContext, useState } from "react"
 
 export const AppContext = createContext();
 
@@ -19,14 +18,23 @@ export function AppContextProvider(props) {
 
     function Change() {
         setAnimate(true)
-            setTimeout(() => {
-                setAnimate(false)
-            }, 2000);
-        }
+        setTimeout(() => {
+            setAnimate(false)
+        }, 1500);
+    }
 
-    useEffect(() => {
-        console.log(menuState)
-    }, [menuState])
+    const [popup, setView] = useState(false)
+    const [itemView, setItemView] = useState()
+
+    function togglePopupView(item) {
+        console.log(item)
+        if (popup === true) {
+            setView(false)
+        } else {
+            setView(true)
+            setItemView(item)
+        }
+    }
 
 
     return (
@@ -35,7 +43,11 @@ export function AppContextProvider(props) {
                 menuState,
                 ToggleMenuState,
                 animate,
-                Change
+                Change,
+                popup,
+                togglePopupView,
+                itemView,
+                setItemView
             }}
         >
             {props.children}
