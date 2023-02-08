@@ -450,7 +450,6 @@ ul li a:hover,
 
 .click-to-close {
   position: fixed;
-
 }
 
 .project-view {
@@ -714,7 +713,7 @@ ul li a:hover,
   .img_about {
     width: auto;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     width: auto;
     max-height: 60vh;
   }
